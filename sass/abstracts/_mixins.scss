@@ -1,0 +1,113 @@
+
+// MEDIA QUERY MANAGER
+
+/*
+
+$breakpoint argument choices:
+- phone 0 - 600px
+- tab-port 600 - 900px
+- tab-land 900 - 1200px
+- big-desktop > 1800px
+
+[1200 - 1800px] normal styles apply
+
+*/
+
+
+@mixin respond($breakpoint){
+  
+  @if $breakpoint == big-desktop{
+    @media only screen and (min-width: 112.5em) { @content };  // 1800px
+  }
+  
+  @if $breakpoint == 1312{
+    @media only screen and (max-width: 82em) { @content };  // 1312px
+  }
+  
+  @if $breakpoint == tab-land{
+    @media only screen and (max-width: 75em) { @content };     // 1200px
+  }
+  
+  @if $breakpoint == 1120{
+    @media only screen and (max-width: 70em) { @content };  // 1120px
+  }
+  
+  @if $breakpoint == 1072{
+    @media only screen and (max-width: 67em) { @content };  // 1072px
+  }
+  
+  @if $breakpoint == tab-port{
+    @media only screen and (max-width: 56.25em) { @content };  // 900px
+  }
+  
+  @if $breakpoint == 768{
+    @media only screen and (max-width: 48em) { @content };  // 768px
+  }
+  
+  @if $breakpoint == 752{
+    @media only screen and (max-width: 47em) { @content };  // 752px
+  }
+  
+  @if $breakpoint == 672{
+    @media only screen and (max-width: 42em) { @content };  // 672px
+  }
+  
+  @if $breakpoint == phone{
+    @media only screen and (max-width: 37.5em) { @content };   // 600px
+  }
+  
+  @if $breakpoint == 512{
+    @media only screen and (max-width: 32em) { @content };  // 512px
+  }
+  
+  @if $breakpoint == 432{
+    @media only screen and (max-width: 27em) { @content };  // 432px
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

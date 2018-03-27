@@ -1,0 +1,817 @@
+
+
+/*************************************  "DELIVERY" SECTION  ****************************/
+
+.delivery{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 7rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  
+  @include respond(tab-land){
+    height: auto;
+  }
+  
+  @include respond(1072){
+    padding: 5rem 4rem;
+  }
+  
+  &__box{
+    
+    & i{
+      font-size: 5rem;
+      color: $col-primary-one;
+    }
+  
+    & h3{
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+  }
+  
+  &__heading{
+    margin-bottom: 3rem;
+    word-spacing: 1rem;
+    text-align: center;
+  }
+  
+  &__text{
+    width: 90%;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  &__row{
+    display: flex;
+    justify-content: space-around;
+  
+    @include respond(768){
+      flex-direction: column;
+    }
+  }
+  
+  &__box{
+    flex: 1 1;
+  
+    &:not(:last-child){
+      margin-right: 3rem;
+    }
+  }
+}
+
+
+/*************************************  "OLD WINE" SECTION  ****************************/
+
+.old-wine{
+  height: auto;
+  
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  &__item{
+    flex: 1 1 25%;
+    height: 25rem;
+    overflow: hidden;
+    background-color: #000;
+  
+    @include respond(1072){
+      height: 22rem;
+    }
+  
+    @include respond(tab-port){
+      height: 20rem;
+    }
+  
+    @include respond(752){
+      flex: 1 1 50%;
+      height: 25rem;
+    }
+  
+    @include respond(432){
+      flex: 1 1 100%;
+      height: 40rem;
+      margin: 1px 3rem;
+    }
+  }
+  
+  &__item img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    transition: all 1s ease;
+    opacity: .7;
+    object-fit: cover;
+    
+    @include respond(tab-land){
+      transform: scale(1);
+    }
+  }
+  
+  &__item img:hover{
+    transform: scale(1.05);
+    opacity: 1;
+  
+    @include respond(tab-land){
+      transform: scale(1);
+    }
+  }
+}
+
+
+/*************************************  "WORKS" SECTION  ****************************/
+
+.works{
+  padding: 5rem 0;
+  height: 105vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  flex-wrap: wrap;
+  
+  @include respond(phone){
+    padding: 4rem 0;
+    align-items: flex-start;
+    height: auto;
+  }
+  
+  &__heading{
+    word-spacing: 1rem;
+    text-align: center;
+  
+    @include respond(phone){
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+  
+    @include respond(432){
+      margin: 0 6rem 4rem 6rem;
+    }
+  }
+  
+  &__row{
+    display: flex;
+    width: 70%;
+    
+    @include respond(1072){
+      width: 85%;
+    }
+  
+    @include respond(tab-port){
+      width: 90%;
+    }
+  
+    @include respond(512){
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  &__phone{
+    height: 45rem;
+    margin-right: 10rem;
+  
+    @include respond(tab-port){
+      margin-right: 8rem;
+    }
+  
+    @include respond(512){
+      margin: 0 0 4rem 0;
+    }
+    
+    &-photo{
+      height: 100%;
+      width: auto;
+    }
+  }
+  
+  &__steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  &__step{
+    display: flex;
+    align-items: center;
+  
+    @include respond(512){
+      margin-bottom: 2rem;
+    }
+    
+    &-circle{
+      height: 6rem;
+      width: 6rem;
+      background-color: transparent;
+      border: 1px solid $col-primary-one;
+      border-radius: 50%;
+      margin-right: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    &-number{
+      font-size: 3rem;
+      color: $col-primary-one;
+    }
+  
+    &-text{
+      font-size: 1.8rem;
+      text-align: justify;
+      text-justify: inter-word;
+      flex: 0 1 85%;
+      
+      @include respond(672){
+        font-size: 1.5rem;
+      }
+  
+      @include respond(phone){
+        font-size: 2rem;
+      }
+    }
+  }
+  
+  &__appstore{
+    display: flex;
+    justify-content: center;
+    
+    & img{
+      height: 5rem;
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+
+/*************************************  "LOCATIONS" SECTION  ****************************/
+
+.locations{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10rem;
+  
+  @include respond(1312){
+    padding: 10rem 6rem;
+    height: auto;
+  }
+  
+  @include respond(1120){
+    padding: 10rem 2rem;
+    height: auto;
+  }
+  
+  @include respond(tab-port){
+    padding: 6rem;
+  }
+  
+  @include respond(phone){
+    padding: 5rem 3rem;
+  }
+  
+  &__heading{
+    margin-bottom: 4rem;
+    word-spacing: 1rem;
+    
+    @include respond(tab-port){
+      text-align: center;
+    }
+  }
+  
+  &__row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    @include respond(1072){
+      flex-direction: column;
+    }
+  }
+  
+  &__first{
+    justify-content: flex-end;
+    display: flex;
+    width: 100%;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  
+    @include respond(1072){
+      justify-content: center;
+      margin: 0 0 2rem 0;
+    }
+  
+    @include respond(phone){
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+  }
+  
+  &__second{
+    justify-content: flex-start;
+    display: flex;
+    width: 100%;
+  
+  
+    @include respond(phone){
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+    
+    @include respond(1072){
+      justify-content: center;
+    }
+  }
+  
+  &__city{
+    width: 26rem;
+  
+    @include respond(phone){
+      width: 50rem;
+    
+    }
+    
+    &:nth-child(1){
+      margin-right: 2rem;
+      
+      @include respond(1072){
+        margin: 0 2rem 2rem 0;
+      }
+      
+      @include respond(phone){
+        margin: 0 0 4rem 0;
+      }
+    }
+    
+    & h3{
+      font-size: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  &__photo img{
+    margin-bottom: 2rem;
+    width: 100%;
+    height: auto;
+  }
+  
+  &__feature{
+    font-size: 2rem;
+   
+    & a:link, a:visited{
+      text-decoration: none;
+      color: $col-primary-light;
+      transition: all .3s;
+    }
+  
+    & a:hover, a:active{
+      color: $col-primary;
+    }
+  }
+  
+  &__icon{
+    margin-right: 2rem;
+    color: $col-primary-one;
+  }
+}
+
+
+/*************************************  "TESTIMONIALS" SECTION  ****************************/
+
+.testimonials{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 8rem;
+  background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)),url(../img/old-wine-6.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  
+  @include respond(1120){
+    height: auto;
+  }
+  
+  @include respond(672){
+    padding: 4rem;
+  }
+  
+  &__heading{
+    word-spacing: 1rem;
+    text-align: center;
+  }
+  
+  &__row{
+    display: flex;
+    justify-content: space-between;
+  
+    @include respond(672){
+      flex-wrap: wrap;
+    }
+  }
+  
+  &__quote{
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 35rem;
+    height: 35rem;
+    
+    & span{
+      margin-bottom: 3rem;
+    }
+    
+    &:not(:last-child){
+      margin-right: 3rem;
+  
+      @include respond(672){
+        margin-bottom: 5rem;
+      }
+    }
+  
+    @include respond(tab-port){
+      height: auto;
+    }
+  
+    @include respond(672){
+      flex: 1 1 100%;
+    }
+    
+    &:before{
+      content: '\201C';
+      font-size: 400%;
+      display: block;
+      height: 6rem;
+      margin-left: -1rem;
+    }
+  }
+  
+  &__cite{
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    
+    & img{
+      height: 8rem;
+      width: 8rem;
+      border-radius: 50%;
+      margin-right: 2rem;
+    }
+  }
+}
+
+
+/*************************************  "BOTTLES" SECTION  ***********************************/
+
+.bottles{
+  display: flex;
+  height: 114vh;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding: 4rem 6rem;
+  background-color: #f1f1f1;
+  
+  @include respond(1312){
+    padding: 4rem;
+  }
+  
+  @include respond(tab-port){
+    height: auto;
+  }
+  
+  @include respond(752){
+    padding: 4rem 3rem;
+  }
+  
+  @include respond(432){
+    padding: 4rem 0;
+  }
+  
+  &__heading{
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  
+  &__row{
+    display: flex;
+    width: 95%;
+    height: 45rem;
+    justify-content: space-between;
+   
+  
+    @include respond(1312){
+      width: 100%;
+      height: auto;
+    }
+  
+    @include respond(512){
+      flex-wrap: wrap;
+      width: 85%;
+    }
+  
+    @include respond(432){
+      width: 100%;
+    }
+  }
+  
+  &__card{
+    display: flex;
+    flex: 0 1 35rem;
+    height: 45rem;
+    box-shadow: 0 1.5rem 2rem rgba(0,0,0,.05);
+    flex-direction: column;
+    border-radius: 3px;
+    overflow: hidden;
+  
+    @include respond(1072){
+      height: 53rem;
+    }
+    
+    @include respond(512){
+      flex: 1 1 100%;
+      margin: 2rem 3rem;
+      text-align: center;
+    }
+    
+    &:not(:last-child){
+      margin-right: 3rem;
+  
+      @include respond(752){
+        margin-right: 2rem
+      }
+  
+      @include respond(512){
+        margin: 2rem 3rem;
+      }
+    }
+  }
+  
+  &__price{
+    height: 37%;
+    background-color: #fbfbfb;
+    padding: 1.3rem;
+  
+    & h3{
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+  
+    &-plan{
+      font-size: 6rem;
+      font-weight: 100;
+      color: $col-primary-one;
+      
+      & span{
+        font-size: 2rem;
+      }
+    }
+    
+    &-sort{
+      font-size: 1.8rem;
+    }
+  }
+  
+  &__feature{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 43%;
+    background-color: #fff;
+    padding: 0 1rem 0 3rem;
+  
+    @include respond(512){
+      justify-content: center;
+    }
+    
+    &-item{
+      display: flex;
+      align-items: baseline;
+      font-size: 1.8rem;
+      list-style: none;
+      
+      & i{
+        margin-right: 1rem;
+        font-size: 2.5rem;
+        color: $col-primary-one;
+      }
+      
+      &:not(:last-child){
+        margin-bottom: .5rem;
+      }
+    }
+  }
+  
+  &__button{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    background-color: #fcfcfc;
+    
+    & a{
+      margin: 0 auto;
+    }
+  }
+}
+
+
+/*************************************  "CONTACT" SECTION  ***********************************/
+
+.contact{
+  display: flex;
+  height: 100vh;
+  background-color: #f1f1f1;
+  
+  @include respond(1072){
+    height: auto;
+  }
+  
+  @include respond(752){
+    flex-wrap: wrap;
+    height: auto;
+  }
+  
+  &__map{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: relative;
+  
+    @include respond(752){
+      flex-wrap: wrap;
+    }
+    
+    & #map{
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      position: absolute;
+      
+      @include respond(752){
+        height: 40rem;
+        width: 100vw;
+        position: relative;
+      }
+    }
+  }
+  
+  &__body{
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    opacity: .9;
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+  
+    @include respond(tab-land){
+      padding: 3rem;
+    }
+  
+    @include respond(752){
+      opacity: 1;
+      width: 100%;
+      z-index: 0;
+    }
+  
+    @include respond(phone){
+      padding: 3rem;
+    }
+    
+    & h2{
+      text-align: center;
+      margin-left: 4rem;
+      margin-right: 4rem;
+  
+      @include respond(tab-land){
+        margin-top: 2rem;
+      }
+    }
+  }
+  
+  &__form{
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    font-size: 2rem;
+    height: 100%;
+  
+    @include respond(tab-land){
+      width: 100%;
+    }
+  
+    @include respond(752){
+      width: 80%;
+    }
+  
+    @include respond(432){
+      width: 100%;
+    }
+  }
+  
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    
+    &:not(:nth-child(4)){
+      @include respond(1072){
+        flex-wrap: wrap;
+      }
+    }
+    
+    & textarea{
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+    }
+  }
+  
+  &__label{
+    flex: 1 1 35%;
+    padding-right: 2rem;
+  
+    @include respond(1072){
+      flex: 1 1 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  &__input{
+    flex: 1 1 65%;
+    padding: .5rem 1rem;
+    font-size: 1.8rem;
+  
+    @include respond(1072){
+      flex: 1 1 100%;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  &__news{
+    padding: 0;
+    font-size: 2rem;
+  }
+  
+  &__button{
+    align-self: flex-end;
+    width: 65%;
+    
+    @include respond(1072){
+      width: auto;
+      align-self: center;
+    }
+    
+    & a{
+      margin-right: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,166 @@
+
+
+.header{
+  background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../img/head-photo.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-attachment: fixed;
+  
+  &__row{
+    width: 100%;
+    padding: 5rem 10rem 0 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  
+    @include respond(752){
+      padding: 5rem 2rem 0 2rem;
+      align-items: flex-start;
+    }
+  
+    @include respond(672){
+      padding: 5rem;
+    }
+  }
+  
+  &__slogan{
+    margin: 0 0 10rem 10rem;
+  
+    @include respond(752){
+      margin-left: 5rem;
+    }
+  
+    @include respond(432){
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 5rem 10rem 5rem;
+      justify-content: center;
+    }
+    
+    & h1{
+      font-size: 7rem;
+      font-weight: 100;
+      color: #f7f7f7;
+      margin-bottom: 2rem;
+  
+      @include respond(432){
+        text-align: center;
+        padding: 0 2rem;
+      }
+    }
+    
+    & .btn:last-child{
+      margin-right: 0;
+    }
+  }
+  
+  &__navbar-list{
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+  
+    @include respond(672){
+      display: none;
+      flex-direction: column;
+      margin-left: 5rem;
+    }
+  }
+  
+  .sticky &__navbar-list{
+    margin-bottom: -.6rem;
+  }
+  
+  &__navbar-item{
+    font-size: 1.8rem;
+    border-bottom: 1px solid transparent;
+  
+    @include respond(752){
+      padding-bottom: 2rem;
+    }
+    
+    &:not(:last-child){
+      margin-right: 3rem;
+    }
+  }
+  
+  .sticky &__navbar-item{
+    font-size: 1.8rem;
+    border-bottom: 1px solid transparent;
+    margin-top: 1rem;
+  }
+  
+  &__navbar-link:link, &__navbar-link:visited{
+    color: #f7f7f7;
+    text-decoration: none;
+    font-weight: 300;
+  }
+  
+  &__navbar-link:after{
+    border-bottom: 2px solid $col-primary;
+    content: '';
+    display: block;
+    padding-bottom: 1.3rem;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .4s ease-in-out;
+    
+    @include respond(tab-port){
+      display: none;
+    }
+  }
+  
+  &__navbar-link:hover:after, &__navbar-link:active:after{
+    transform: scaleX(1);
+  }
+  
+  &__logo-img, &__logo-black{
+    height: 10rem;
+    width: 10rem;
+  }
+  
+  .sticky &__logo-img{
+    display: none;
+  }
+  
+  .sticky &__logo-black{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  &__logo-black{
+    display: none;
+  }
+  
+  .sticky &__navbar-link:link, .sticky &__navbar-link:visited{
+    color: #555;
+    text-decoration: none;
+    font-weight: 300;
+  }
+  
+  &__mobile-nav-icon{
+    display: none;
+  
+    @include respond(672){
+      display: block;
+      margin-left: auto;
+    }
+    
+    & i{
+        font-size: 3.5rem;
+        color: #f7f7f7;
+  
+      @include respond(phone){
+        font-size: 4.5rem;
+      }
+    }
+  }
+  
+  .sticky &__mobile-nav-icon i{
+    color: #555;
+  }
+}

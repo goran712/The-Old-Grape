@@ -1,0 +1,14 @@
+
+.heading-2{
+    font-size: 3.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+   
+    &:after{
+      content: '';
+      display: block;
+      border-bottom: 2px solid $col-primary-one;
+      width: 30%;
+      margin: 3rem auto 0 auto;
+    }
+}

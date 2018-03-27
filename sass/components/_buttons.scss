@@ -1,0 +1,32 @@
+
+
+.btn{
+  background-color: $col-primary;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-right: 3rem;
+  padding: 1rem 3rem;
+  border-radius: 10rem;
+  display: inline-block;
+  
+  &-full{
+    color: #fff;
+    transition: all .5s;
+  
+    &:hover, &:active{
+      background-color: $col-primary-one;
+    }
+  }
+  
+  &-ghost{
+    color: $col-primary;
+    background-color: transparent;
+    border: 1px solid $col-primary;
+    transition: all .5s;
+    
+    &:hover, &:active{
+      background-color: $col-primary;
+      color: #fff;
+    }
+  }
+}
