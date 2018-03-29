@@ -20,7 +20,7 @@ html {
   }
   
   @include respond(phone){
-    font-size: 37.5%;
+//     font-size: 37.5%;
   }
   
   @include respond(big-desktop){
